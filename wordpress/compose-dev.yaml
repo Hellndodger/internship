@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    env_file:
+      - local.env
+    volumes:
+      - wordpress:/var/www/html
+
+  mysql:
+    image: mysql
+    restart: always
+    env_file:
+      - local.env
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - 8081:80
+    env_file:
+      - local.env
+
+volumes:
+  db:
+  wordpress:

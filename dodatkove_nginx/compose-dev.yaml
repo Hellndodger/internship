@@ -1,0 +1,41 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    networks:
+      - web
+
+  whoami:
+    image: traefik/whoami:latest
+    ports:
+      - 8081:80
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  httpbin:
+    image: kennethreitz/httpbin
+    ports:
+      - 8082:80
+    networks:
+      - web
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/status/200" ]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+  netshoot:
+    image: nicolaka/netshoot:latest
+    command: ["sleep", "infinity"]
+    networks:
+      - web
+
+networks:
+  web:
+  
