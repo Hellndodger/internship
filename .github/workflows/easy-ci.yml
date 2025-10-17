@@ -17,7 +17,7 @@ jobs:
 
       # Запускаєм контейнери
       - name: run containers
-        run: docker compose -f compose-ci.yaml up -d
+        run: docker compose -f wordpress/compose-ci.yaml up -d
       - name: Wait for startup  # Пауза, щоб контейнери встигли запуститися
         run: sleep 30
       - name: Check if runs # чекаєм чи запустились 
@@ -25,4 +25,4 @@ jobs:
       - name: Wait before destroy #трохи чекаєм 
         run: sleep 15
       - name: Destroy 
-        run: docker compose -f compose-ci.yaml down
+        run: docker compose -f wortpress/compose-ci.yaml down
