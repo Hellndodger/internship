@@ -1,0 +1,28 @@
+
+
+name: easy-ci
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: say hi
+        run: echo Runner is up
+
+      # Запускаєм контейнери
+      - name: run containers
+        run: docker compose -f compose-dev.yaml up -d
+      - name: Wait for startup  # Пауза, щоб контейнери встигли запуститися
+        run: sleep 30
+      - name: Check if runs # чекаєм чи запустились 
+        run: docker ps
+      - name: Wait before destroy #трохи чекаєм 
+        run: sleep 15
+      - name: Destroy 
+        run: docker compose -f compose-dev.yaml down
