@@ -22,7 +22,5 @@ jobs:
         run: sleep 30
       - name: Check if runs # чекаєм чи запустились 
         run: docker ps
-      - name: Wait before destroy #трохи чекаєм 
-        run: sleep 15
       - name: Destroy 
-        run: docker compose -f wortpress/compose-ci.yaml down
+        run: docker compose -f wordpress/compose-ci.yaml down
