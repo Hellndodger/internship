@@ -40,3 +40,50 @@
 
 
 <img width="1280" height="621" alt="image" src="https://github.com/user-attachments/assets/17c371a3-9f85-44b1-9416-3e5ccd2a88cb" />
+
+
+Завдання з статті:
+1) Створив простий конфігураційний файл docker-compose для запуску nginx сервера на 80 порті
+2) Написав другий конфігураційний файл для запуску вордпресу з базою даних MYSQL та валідував контроль панельку, після того трішки редагував конфігураційний файл аби змінні середовища тягнулись з .env файлу
+3) Написав легеньку ci яка запускає контейнери перевіряє чи вони запустились на сервері та видаляєтся автоматично.
+Скріни:
+
+
+<img width="1280" height="740" alt="image" src="https://github.com/user-attachments/assets/b117bf80-ad38-4565-a856-4917a45504f5" />
+
+
+<img width="1280" height="988" alt="image" src="https://github.com/user-attachments/assets/13c9da2b-f9a9-4b68-aac7-17a3bc098252" />
+
+<img width="1280" height="674" alt="image" src="https://github.com/user-attachments/assets/2314f0cb-84d6-430b-9520-2f76fcb383f1" />
+
+
+<img width="587" height="754" alt="image" src="https://github.com/user-attachments/assets/b9dc1e25-7dfc-4538-aaad-52234f47120c" />
+
+
+<img width="1280" height="930" alt="image" src="https://github.com/user-attachments/assets/6a0a415a-f2ce-4907-9957-25702a4088c7" />
+
+<img width="1280" height="688" alt="image" src="https://github.com/user-attachments/assets/21c3d86c-1e0b-418e-86b2-48ebe4b776c5" />
+
+
+<img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/bd910db3-0e0b-4b66-8754-5813d8cf0716" />
+
+
+<img width="539" height="780" alt="image" src="https://github.com/user-attachments/assets/fcc30375-12a9-4b1b-a328-45ac83c9086e" />
+
+
+<img width="1280" height="682" alt="image" src="https://github.com/user-attachments/assets/5c8de714-ee3a-45e2-b0c3-2666990e3101" />
+
+
+<img width="1280" height="703" alt="image" src="https://github.com/user-attachments/assets/81143c36-8a82-4d2c-bd7e-a02322267363" />
+
+
+<img width="1280" height="853" alt="image" src="https://github.com/user-attachments/assets/f14a8b4e-8c9e-48bd-b6e8-1cba4de34007" />
+
+
+<img width="1280" height="431" alt="image" src="https://github.com/user-attachments/assets/ea495c0f-56e7-4ff7-bb9e-6d06996a8975" />
+
+
+
+
+
+
